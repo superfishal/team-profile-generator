@@ -29,7 +29,7 @@ function generateQuestions() {
           addIntern();
           break;
         case "Quit":
-          console.log(employeeArray);
+          generateHTML();
           break;
         default:
           console.log(employeeArray);
@@ -143,6 +143,14 @@ function addIntern() {
       employeeArray.push(intern);
       generateQuestions();
     });
+}
+
+function generateHTML() {
+  const outputPath = path.join(
+    path.resolve(__dirname, "output"),
+    "Employee-Profiles.html"
+  );
+  fs.writeFileSync(outputPath, "Hello Bananas!", "UTF-8");
 }
 
 generateQuestions();

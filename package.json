@@ -1,0 +1,34 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "node.js cli profile generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superfishal/team-profile-generator.git"
+  },
+  "keywords": [
+    "CLI",
+    "node",
+    "js",
+    "TDD",
+    "OOP",
+    "HTML"
+  ],
+  "author": "A Fish - superfishal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superfishal/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/superfishal/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2",
+    "jest": "^27.5.1"
+  }
+}

@@ -4,10 +4,15 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/Engineer.js");
 const Manager = require("./lib/Manager.js");
 const Intern = require("./lib/Intern.js");
+const pageTemplate = require("./src/page-template.js");
+const outputDirectory = path.resolve(__dirname, "dist");
+const outputPath = path.join(outputDirectory, "index.html");
 const employeeArray = [];
-console.log("Welcome to my Profile Generator");
 
 function generateQuestions() {
+  console.log(
+    "Please Select a new team member and follow the prompts!  When you're done hit Quit."
+  );
   inquirer
     .prompt([
       {
@@ -32,7 +37,7 @@ function generateQuestions() {
           generateHTML();
           break;
         default:
-          console.log(employeeArray);
+        // console.log(employeeArray);
       }
     });
 }
@@ -146,11 +151,8 @@ function addIntern() {
 }
 
 function generateHTML() {
-  const outputPath = path.join(
-    path.resolve(__dirname, "output"),
-    "Employee-Profiles.html"
-  );
-  fs.writeFileSync(outputPath, "Hello Bananas!", "UTF-8");
+  fs.writeFileSync(outputPath, pageTemplate(employeeArray), "UTF-8");
+  console.log("Web Page successfully generated.");
 }
 
 generateQuestions();

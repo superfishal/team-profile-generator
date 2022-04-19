@@ -156,7 +156,7 @@ function addIntern() {
 }
 
 const generateHTML = () => {
-  console.log("Generating HTML");
+  if (!fs.existsSync) console.log("Generating HTML");
   fs.writeFileSync(outputPath, pageTemplate(employeeArray), "UTF-8");
   console.log("Web Page successfully generated.");
 };

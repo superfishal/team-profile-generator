@@ -2,8 +2,14 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer.js");
 const Manager = require("./lib/Manager.js");
 const Intern = require("./lib/Intern.js");
+
+const inquirer = require("inquirer");
+const path = require("path");
+const fs = require("fs");
+
 const pageTemplate = require("./src/page-template.js");
-const outputDirectory = path.resolve(__dirname, "dist");
+
+const outputDirectory = path.resolve(__dirname, "output");
 const outputPath = path.join(outputDirectory, "index.html");
 // empty employee array
 const employeeArray = [];

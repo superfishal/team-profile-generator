@@ -9,7 +9,7 @@ const fs = require("fs");
 
 const pageTemplate = require("./src/page-template.js");
 
-const outputDirectory = path.resolve(__dirname, "output");
+const outputDirectory = path.resolve(__dirname, "dist");
 const outputPath = path.join(outputDirectory, "index.html");
 // empty employee array
 const employeeArray = [];

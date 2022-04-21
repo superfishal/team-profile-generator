@@ -53,6 +53,56 @@ const htmlPageElements = (employeeArray) => {
 </div>
 `;
   };
-};
+  // html page
+  const html = [];
 
-// wtf else nothings working
+  html.push(
+    employeeArray
+      .filter((employee) => employee.getRole() === "Manager")
+      .map((manager) => managerCardEl(manager))
+  );
+  html.push(
+    employeeArray
+      .filter((employee) => employee.getRole() === "Engineer")
+      .map((engineer) => engineerCardEl(engineer))
+      .join("")
+  );
+  html.push(
+    employeeArray
+      .filter((employee) => employee.getRole() === "Intern")
+      .map((intern) => internCardEl(intern))
+      .join("")
+  );
+
+  return html.join("");
+};
+module.exports = (employeeArray) => {
+  return `    <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Generated Team Profile</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3">
+                <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                ${htmlPageElements(employeeArray)}
+            </div>
+        </div>
+    </div>
+</body>
+</html>`;
+};

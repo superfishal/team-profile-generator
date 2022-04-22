@@ -7,7 +7,7 @@ const htmlPageElements = (employeeArray) => {
     <div class="card">
     <div class="card-header">
         <h2 class="card-title">${manager.getName()}</h2>
-        <h3 class="card-subtitle mb-2"><i class="stack" style="font-size: 2rem; color: cornflowerblue;"></i>${manager.getRole()}</h3>
+        <h3 class="card-subtitle"><i class="stack" style="font-size: 2rem; color: cornflowerblue;"></i>${manager.getRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -24,7 +24,7 @@ const htmlPageElements = (employeeArray) => {
     <div class="card">
     <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
-        <h3 class="card-subtitle mb-2"><i class="tools" style="font-size: 2rem; color: cornflowerblue;"></i>${engineer.getRole()}</h3>
+        <h3 class="card-subtitle"><i class="tools" style="font-size: 2rem; color: cornflowerblue;"></i>${engineer.getRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -41,7 +41,7 @@ const htmlPageElements = (employeeArray) => {
     <div class="card">
     <div class="card-header">
         <h2 class="card-title">${intern.getName()}</h2>
-        <h3 class="card-subtitle mb-2"><i class="book-half" style="font-size: 2rem; color: cornflowerblue;"></i>${intern.getRole()}</h3>
+        <h3 class="card-subtitle"><i class="book-half" style="font-size: 2rem; color: cornflowerblue;"></i>${intern.getRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">

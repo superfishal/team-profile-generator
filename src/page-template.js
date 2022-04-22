@@ -5,9 +5,9 @@ const htmlPageElements = (employeeArray) => {
   const managerCardEl = (manager) => {
     return `
     <div class="card">
-    <div class="card-header">
-        <h2 class="card-title">${manager.getName()}</h2>
-        <h3 class="card-subtitle"><i class="stack" style="font-size: 2rem; color: cornflowerblue;"></i>${manager.getRole()}</h3>
+    <div class="card-header text-center">
+        <h5 class="card-title">${manager.getName()}</h2>
+        <h6 class="card-subtitle"><i class="bi bi-stack" style="font-size: 1rem;"></i>  ${manager.getRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -22,9 +22,9 @@ const htmlPageElements = (employeeArray) => {
   const engineerCardEl = (engineer) => {
     return `
     <div class="card">
-    <div class="card-header">
-        <h2 class="card-title">${engineer.getName()}</h2>
-        <h3 class="card-subtitle"><i class="tools" style="font-size: 2rem; color: cornflowerblue;"></i>${engineer.getRole()}</h3>
+    <div class="card-header text-center">
+        <h5 class="card-title">${engineer.getName()}</h2>
+        <h6 class="card-subtitle"><i class="bi bi-tools" style="font-size: 1rem;"></i>  ${engineer.getRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -39,9 +39,9 @@ const htmlPageElements = (employeeArray) => {
   const internCardEl = (intern) => {
     return `
     <div class="card">
-    <div class="card-header">
-        <h2 class="card-title">${intern.getName()}</h2>
-        <h3 class="card-subtitle"><i class="book-half" style="font-size: 2rem; color: cornflowerblue;"></i>${intern.getRole()}</h3>
+    <div class="card-header text-center">
+        <h5 class="card-title">${intern.getName()}</h2>
+        <h6 class="card-subtitle"><i class="bi bi-book-half" style="font-size: 1rem;"></i>  ${intern.getRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
